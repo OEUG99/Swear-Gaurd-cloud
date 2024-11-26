@@ -79,10 +79,12 @@ def beep_swears_audio():
     audio_file = request.files['audio']
     audio_file.save(AUDIO_FILE)
 
-    if not request.json or 'swear_list' not in request.json:
+    swear_list = request.form.get('swear_list')
+    if swear_list:
+        swear_list = json.loads(swear_list)
+    else:
         return jsonify(error="No swear list provided"), 400
 
-    swear_list = request.json['swear_list']
     transcription_result = load_and_transcribe_audio(AUDIO_FILE, MODEL_SIZE, DEVICE_TYPE, LANGUAGE)
 
     beep_swears(AUDIO_FILE, transcription_result, swear_list)
