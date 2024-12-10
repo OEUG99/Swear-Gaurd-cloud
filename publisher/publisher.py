@@ -11,7 +11,7 @@ sns = boto3.client('sns')
 # Configuration
 file_path = 'test-video.mp4'
 file_id = str(uuid.uuid4())
-bucket_name = 'applebananatest123'
+bucket_name = 'placeholder'
 s3_key = "raw/" + file_id + "_" +  file_path
 table_name = 'API-DB'
 topic_arn = 'arn:aws:sns:us-east-1:812477365003:FileStateChange'  # Replace with your topic ARN

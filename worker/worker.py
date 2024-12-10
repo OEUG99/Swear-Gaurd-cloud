@@ -10,7 +10,7 @@ import boto3
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 
 # Configuration
-bucket_name = 'applebananatest123'
+bucket_name = 'placeholder'
 
 # Initialize SQS client
 sqs = boto3.client('sqs')

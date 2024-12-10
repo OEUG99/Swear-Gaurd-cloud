@@ -22,8 +22,8 @@ def load_and_transcribe_audio(file_path, model_size, device, language):
 
 def beep_swears(audio_path, file_id, transcription, swear_list=None):
     if swear_list is None:
-        swear_list = ["nigga", "nigger", "bitch", "dick", "fuck", "shit", "ass", "dyke", "slut", "fucking", "hoe", "slut", "F***", "f***"]  # Replace with your own list of swear words
-                        # Default swear words list
+        swear_list = ["censor"]  # Replace with a more comprehensive  list later.
+
     audio = AudioSegment.from_file(audio_path, format="mp3")
     beeps = []
 
